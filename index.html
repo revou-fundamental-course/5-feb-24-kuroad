@@ -7,20 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <a href="" class="logo">LOGO</a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </header>
-    <div class="input-section">
-        <label for="input-field"> Celcius</label>
-        <input type="number" class="input-field">
-    </div>
-    <button class="my-button">Konversi</button>
+    <header id="nav-bar">
+        <h3 id="logo">Temperature Converter</h3>
+    </header>
+      
+      <div class="container">
+        <div class="input-section">
+          <form id="converterForm">
+            <label for="input-field">Temperature (Celsius)</label>
+            <input type="number" id="input-field" class="input-field" placeholder="Enter temperature in Celsius" required>
+            <button type="submit" class="my-button">Convert</button>
+            <p id="error-message" class="error-message"></p> <!-- Element for error message -->
+          </form>
+        </div>
+        
+        <div id="result" class="result-section">
+          <h2>Conversion Result</h2>
+          <p id="conversion-explanation"></p>
+          <p id="converted-temperature"></p>
+        </div>
+      </div>
 </body>
 </html>

@@ -9,23 +9,59 @@
 <body>
     <header id="nav-bar">
         <h3 id="logo">Temperature Converter</h3>
+        <nav>
+            <ul>
+                <li><a href="#converter">Celsius</a></li>
+                <li><a href="#converterF">Fahrenheit</a></li>
+            </ul>
+        </nav>
     </header>
       
-      <div class="container">
-        <div class="input-section">
-          <form id="converterForm">
-            <label for="input-field">Temperature (Celsius)</label>
-            <input type="number" id="input-field" class="input-field" placeholder="Enter temperature in Celsius" required>
-            <button type="submit" class="my-button">Convert</button>
-            <p id="error-message" class="error-message"></p> <!-- Element for error message -->
-          </form>
+    <div class="container">
+        <div class="converter-container" id="converter">
+            <!-- Konverter Celsius -->
+            <h2>Celsius Converter</h2>
+            <form id="converterForm">
+                <label for="input-field">Temperature (Celsius)</label>
+                <input type="number" id="input-field" class="input-field" placeholder="Enter temperature in Celsius" required>
+                <button type="submit" class="my-button">Convert</button>
+                <p id="error-message" class="error-message"></p> <!-- Element for error message -->
+            </form>
+            <div id="result" class="result-section">
+                <h3>Conversion Result</h3>
+                <p id="conversion-explanation"></p>
+                <p id="converted-temperature"></p>
+            </div>
         </div>
         
-        <div id="result" class="result-section">
-          <h2>Conversion Result</h2>
-          <p id="conversion-explanation"></p>
-          <p id="converted-temperature"></p>
+        <div class="converter-container" id="converterF">
+            <!-- Konverter Fahrenheit -->
+            <h2>Fahrenheit Converter</h2>
+            <form id="converterFormF">
+                <label for="input-field-f">Temperature (Fahrenheit)</label>
+                <input type="number" id="input-field-f" class="input-field" placeholder="Enter temperature in Fahrenheit" required>
+                <button type="submit" class="my-button">Convert</button>
+                <p id="error-message-f" class="error-message"></p> <!-- Element for error message -->
+            </form>
+            <div id="result-f" class="result-section">
+                <h3>Conversion Result</h3>
+                <p id="conversion-explanation-f"></p>
+                <p id="converted-temperature-f"></p>
+            </div>
         </div>
-      </div>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="contact-info">
+            <p>Email: example@example.com</p>
+            <p>Phone: +1234567890</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

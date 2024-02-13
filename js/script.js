@@ -18,3 +18,50 @@ document.getElementById("converterForm").addEventListener("submit", function(eve
         document.getElementById("converted-temperature").textContent = "Converted Temperature: " + fahrenheit.toFixed(2) + "°F";
     }
 });
+
+document.getElementById("converterFormF").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var fahrenheitInput = document.getElementById("input-field-f").value.trim();
+    
+    // Pemeriksaan apakah input berisi angka termasuk minus (-)
+    if (!/^(-)?(0|[1-9]\d*)(\.\d+)?$/.test(fahrenheitInput)) {
+        document.getElementById("error-message-f").textContent = "Please enter a valid number for temperature in Fahrenheit.";
+        return;
+    } else {
+        document.getElementById("error-message-f").textContent = ""; // Menghapus pesan kesalahan jika input valid
+    }
+    
+    var fahrenheit = parseFloat(fahrenheitInput);
+    if (!isNaN(fahrenheit)) {
+        var celsius = (fahrenheit - 32) * 5/9;
+        var explanation = fahrenheit + "°F is equal to " + celsius.toFixed(2) + "°C.";
+        document.getElementById("conversion-explanation-f").textContent = explanation;
+        document.getElementById("converted-temperature-f").textContent = "Converted Temperature: " + celsius.toFixed(2) + "°C";
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scroll untuk link di navbar
+    var navbarLinks = document.querySelectorAll('#nav-bar a');
+    navbarLinks.forEach(function(navbarLink) {
+        navbarLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            var targetId = this.getAttribute('href');
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Smooth scroll untuk link di footer
+    var footerLinks = document.querySelectorAll('footer a');
+    footerLinks.forEach(function(footerLink) {
+        footerLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            var targetId = this.getAttribute('href');
+            document.querySelector(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});

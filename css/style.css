@@ -5,7 +5,7 @@ body {
 }
 
 #nav-bar {
-    background-color: #333;
+    background-color: #1172c4;
     color: #fff;
     padding: 20px 20px;
     display: flex;
@@ -48,12 +48,12 @@ nav ul li a:hover {
 
 .converter-container {
     width: 100%;
-    height: 2000px;
+    height: 750px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 20px;
-    background-color: #f2f2f2; /* Or any background color you prefer */
+    background-color: #f2f2f2;
 }
 
 .converter h2 {
@@ -61,8 +61,7 @@ nav ul li a:hover {
 }
 
 .container {
-
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .input-section {
@@ -75,18 +74,58 @@ nav ul li a:hover {
     margin-top: 5px;
 }
 
-.my-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+button {
     cursor: pointer;
-    margin-top: 10px;
+    outline: none;
+  }
+
+button.outline {
+  position: relative;
+  z-index: 3;
+  background: transparent;
+  color: #1172c4;
+  font-size: 14px;
+  border-color: #1172c4;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 0px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
 }
+
+button.outline a {
+    text-decoration: none;
+}
+
+button.outline:hover {
+    color: white;
+    background: #1172c4;
+    border-color: white;
+    transition: all 0.2s linear;
+}
+  
+button.outline:active {
+    border-radius: 22px;
+}
+
+button.white-blue {
+    font-weight: 700;
+    color: #00aeef;
+    border-color: white;
+    background: white;
+  }
+  
+button.white-blue:hover {
+    color: white;
+    background: #00aeef;
+    border-color: white;
+}
+  
 
 .result-section {
     margin-top: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .error-message {
@@ -96,12 +135,10 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color:#1172c4 ;
     color: white;
     padding: 20px 0;
     text-align: center;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 

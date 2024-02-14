@@ -2,12 +2,11 @@ document.getElementById("converterForm").addEventListener("submit", function(eve
     event.preventDefault();
     var celsiusInput = document.getElementById("input-field").value.trim();
     
-    // Pemeriksaan apakah input berisi angka termasuk minus (-)
-    if (!/^(-)?(0|[1-9]\d*)(\.\d+)?$/.test(celsiusInput)) {
+    if (!/^(-)?(\d+|\d*\.\d+)$/.test(celsiusInput)) {
         document.getElementById("error-message").textContent = "Please enter a valid number for temperature in Celsius.";
         return;
     } else {
-        document.getElementById("error-message").textContent = ""; // Menghapus pesan kesalahan jika input valid
+        document.getElementById("error-message").textContent = "";
     }
     
     var celsius = parseFloat(celsiusInput);
@@ -23,12 +22,11 @@ document.getElementById("converterFormF").addEventListener("submit", function(ev
     event.preventDefault();
     var fahrenheitInput = document.getElementById("input-field-f").value.trim();
     
-    // Pemeriksaan apakah input berisi angka termasuk minus (-)
-    if (!/^(-)?(0|[1-9]\d*)(\.\d+)?$/.test(fahrenheitInput)) {
+    if (!/^(-)?(\d+|\d*\.\d+)$/.test(fahrenheitInput)) {
         document.getElementById("error-message-f").textContent = "Please enter a valid number for temperature in Fahrenheit.";
         return;
     } else {
-        document.getElementById("error-message-f").textContent = ""; // Menghapus pesan kesalahan jika input valid
+        document.getElementById("error-message-f").textContent = "";
     }
     
     var fahrenheit = parseFloat(fahrenheitInput);
@@ -41,7 +39,6 @@ document.getElementById("converterFormF").addEventListener("submit", function(ev
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Smooth scroll untuk link di navbar
     var navbarLinks = document.querySelectorAll('#nav-bar a');
     navbarLinks.forEach(function(navbarLink) {
         navbarLink.addEventListener('click', function(event) {
@@ -52,8 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
-
-    // Smooth scroll untuk link di footer
+    
     var footerLinks = document.querySelectorAll('footer a');
     footerLinks.forEach(function(footerLink) {
         footerLink.addEventListener('click', function(event) {
